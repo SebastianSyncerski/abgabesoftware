@@ -1,0 +1,62 @@
+﻿<Window x:Class="DwarfCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:converter="clr-namespace:DwarfCalculator.Converter"
+        xmlns:viewModels="clr-namespace:DwarfCalculator.ViewModels"
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:local="clr-namespace:DwarfCalculator"
+        mc:Ignorable="d"
+        DataContext="{dxmvvm:ViewModelSource Type=viewModels:MainWindowVM}"
+        d:DataContext="{d:DesignInstance Type=viewModels:MainWindowVM, IsDesignTimeCreatable=False}"
+        Title="DwarfCalculator"
+        Height="400" Width="800">
+    <Window.Resources>
+        <converter:CountHasGoodNumberConverter x:Key="CountHasGoodNumberConverter"/>
+    </Window.Resources>
+    <Canvas>
+        <TextBox x:Name="DwarfCount" Canvas.Left="61" Canvas.Top="37" FontSize="20" Width="94" Height="30" TextAlignment="Center" Text="{Binding DwarfcountInput, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock x:Name="DwarfCountHeader" Text="Current Amount of Dwarfs" Canvas.Left="18" Canvas.Top="11" FontSize="16" FontWeight="Bold" TextDecorations="Underline"/>
+        <TextBlock x:Name="DwarfCountErrormessage" Text="Dwarf count is not a valid number!" Canvas.Left="28" Canvas.Top="72" FontSize="11" Foreground="Red" 
+                   Visibility="{Binding ElementName=DwarfCount, Path=Text, Converter={StaticResource CountHasGoodNumberConverter}}"/>
+        <Button x:Name="CalculateButton" Content="Calculate" Canvas.Left="71" Canvas.Top="100" Width="75" Command="{Binding OnCalculateCommand}" IsEnabled="{Binding ButtonEnabled}"/>
+        <TextBlock x:Name="WorkshoptypesHeader" Text="Workshop Type" Canvas.Left="276" Canvas.Top="11" FontSize="16" FontWeight="Bold" TextDecorations="Underline"/>
+        <TextBlock x:Name="ItemtypesHeader" Text="Item Type" Canvas.Left="467" Canvas.Top="11" FontSize="16" FontWeight="Bold" TextDecorations="Underline"/>
+        <TextBlock x:Name="NeededWorkshopsHeader" Text="Needed active Workshops" Canvas.Left="577" Canvas.Top="11" FontSize="16" FontWeight="Bold" TextDecorations="Underline"/>
+        <TextBlock Text="Kitchen" Canvas.Left="276" Canvas.Top="46" FontSize="16" TextAlignment="Center"/>
+        <TextBlock Text="Farmers shop" Canvas.Left="276" Canvas.Top="89" FontSize="16" TextAlignment="Center"/>
+        <TextBlock Text="Craftdwarf" Canvas.Left="276" Canvas.Top="131" FontSize="16" TextAlignment="Center"/>
+        <TextBlock Text="Smelter" Canvas.Left="276" Canvas.Top="173" FontSize="16" TextAlignment="Center"/>
+        <TextBox x:Name="NeededAmount" Canvas.Left="657" Canvas.Top="37" FontSize="20" Width="50" Height="30" IsReadOnly="True" Text="{Binding KitchenWorkshops}" TextAlignment="Center"/>
+        <TextBox x:Name="NeededAmount_Copy" Canvas.Left="657" Canvas.Top="80" FontSize="20" Width="50" Height="30" IsReadOnly="True"/>
+        <TextBox x:Name="NeededAmount_Copy1" Canvas.Left="657" Canvas.Top="122" FontSize="20" Width="50" Height="30" IsReadOnly="True" Text="{Binding CraftWorkshops}" />
+        <TextBox x:Name="NeededAmount_Copy2" Canvas.Left="657" Canvas.Top="164" FontSize="20" Width="50" Height="30" IsReadOnly="True"/>
+        <GridSplitter Height="2" Canvas.Left="276" Canvas.Top="72" Width="479"/>
+        <GridSplitter Height="2" Canvas.Left="276" Canvas.Top="115" Width="479"/>
+        <GridSplitter Height="2" Canvas.Left="276" Canvas.Top="157" Width="479"/>
+        <GridSplitter Height="2" Canvas.Left="276" Canvas.Top="199" Width="479"/>
+        <ComboBox x:Name="ItemTypeKitchen" Width="120" Canvas.Left="448" Canvas.Top="45" IsReadOnly="True" SelectedIndex="{Binding KitchenItemIndex}">
+            <ListBoxItem Content="Easy Meal"/>
+            <ListBoxItem Content="Fine Meal"/>
+            <ListBoxItem Content="Lavish Meal"/>
+        </ComboBox>
+        <TextBox x:Name="ItemTypeFarmers" Text="Processed (bag)" Width="120" Canvas.Left="448" Canvas.Top="88" IsReadOnly="True" TextAlignment="Center"/>
+        <ComboBox x:Name="ItemTypeCraftsdwarf" Width="120" Canvas.Left="448" Canvas.Top="130" IsReadOnly="True" SelectedIndex="{Binding CraftItemIndex}">
+            <ListBoxItem Content="Bone Bolts"/>
+            <ListBoxItem Content="Wooden Bolts"/>
+            <ListBoxItem Content="Copper Bolts"/>
+            <ListBoxItem Content="Steel Bolts"/>
+        </ComboBox>
+        <TextBox x:Name="ItemTypeSmelter" Text="" Width="120" Canvas.Left="448" Canvas.Top="176" IsReadOnly="True" TextAlignment="Center"/>
+        <TextBox x:Name="RangerCount" Canvas.Left="61" Canvas.Top="164" FontSize="20" Width="94" Height="30" TextAlignment="Center" Text="{Binding RangercountInput, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock x:Name="RangerCountHeader" Text="Current Amount of Rangers" Canvas.Left="18" Canvas.Top="138" FontSize="16" FontWeight="Bold" TextDecorations="Underline"/>
+        <TextBlock x:Name="RangerCountErrormessage" Text="Dwarf count is not a valid number!" Canvas.Left="28" Canvas.Top="199" FontSize="11" Foreground="Red"
+                   Visibility="{Binding ElementName=RangerCount, Path=Text, Converter={StaticResource CountHasGoodNumberConverter}}"/>
+        <TextBlock Text="Wood Furnace" Canvas.Left="276" Canvas.Top="215" FontSize="16" TextAlignment="Center"/>
+        <TextBox x:Name="NeededAmount_Copy3" Canvas.Left="657" Canvas.Top="206" FontSize="20" Width="50" Height="30" IsReadOnly="True"/>
+        <GridSplitter Height="2" Canvas.Left="276" Canvas.Top="241" Width="479"/>
+        <TextBox x:Name="ItemTypeFurnace" Text="Charcoal" Width="120" Canvas.Left="448" Canvas.Top="218" IsReadOnly="True" TextAlignment="Center"/>
+
+    </Canvas>
+</Window>
