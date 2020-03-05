@@ -29,9 +29,9 @@
         <TextBlock Text="Craftdwarf" Canvas.Left="276" Canvas.Top="131" FontSize="16" TextAlignment="Center"/>
         <TextBlock Text="Smelter" Canvas.Left="276" Canvas.Top="173" FontSize="16" TextAlignment="Center"/>
         <TextBox x:Name="NeededAmount" Canvas.Left="657" Canvas.Top="37" FontSize="20" Width="50" Height="30" IsReadOnly="True" Text="{Binding KitchenWorkshops}" TextAlignment="Center"/>
-        <TextBox x:Name="NeededAmount_Copy" Canvas.Left="657" Canvas.Top="80" FontSize="20" Width="50" Height="30" IsReadOnly="True"/>
-        <TextBox x:Name="NeededAmount_Copy1" Canvas.Left="657" Canvas.Top="122" FontSize="20" Width="50" Height="30" IsReadOnly="True" Text="{Binding CraftWorkshops}" />
-        <TextBox x:Name="NeededAmount_Copy2" Canvas.Left="657" Canvas.Top="164" FontSize="20" Width="50" Height="30" IsReadOnly="True"/>
+        <TextBox x:Name="NeededAmount_Copy" Canvas.Left="657" Canvas.Top="80" FontSize="20" Width="50" Height="30" IsReadOnly="True" TextAlignment="Center" Text="{Binding FarmerWorkshops}"/>
+        <TextBox x:Name="NeededAmount_Copy1" Canvas.Left="657" Canvas.Top="122" FontSize="20" Width="50" Height="30" IsReadOnly="True" Text="{Binding CraftWorkshops}" TextAlignment="Center" />
+        <TextBox x:Name="NeededAmount_Copy2" Canvas.Left="657" Canvas.Top="164" FontSize="20" Width="50" Height="30" IsReadOnly="True" TextAlignment="Center" Text="{Binding SmelterWorkshops}"/>
         <GridSplitter Height="2" Canvas.Left="276" Canvas.Top="72" Width="479"/>
         <GridSplitter Height="2" Canvas.Left="276" Canvas.Top="115" Width="479"/>
         <GridSplitter Height="2" Canvas.Left="276" Canvas.Top="157" Width="479"/>
@@ -48,13 +48,13 @@
             <ListBoxItem Content="Copper Bolts"/>
             <ListBoxItem Content="Steel Bolts"/>
         </ComboBox>
-        <TextBox x:Name="ItemTypeSmelter" Text="" Width="120" Canvas.Left="448" Canvas.Top="176" IsReadOnly="True" TextAlignment="Center"/>
+        <TextBox x:Name="ItemTypeSmelter" Text="{Binding SmelterItem}" Width="120" Canvas.Left="448" Canvas.Top="176" IsReadOnly="True" TextAlignment="Center"/>
         <TextBox x:Name="RangerCount" Canvas.Left="61" Canvas.Top="164" FontSize="20" Width="94" Height="30" TextAlignment="Center" Text="{Binding RangercountInput, UpdateSourceTrigger=PropertyChanged}"/>
         <TextBlock x:Name="RangerCountHeader" Text="Current Amount of Rangers" Canvas.Left="18" Canvas.Top="138" FontSize="16" FontWeight="Bold" TextDecorations="Underline"/>
         <TextBlock x:Name="RangerCountErrormessage" Text="Dwarf count is not a valid number!" Canvas.Left="28" Canvas.Top="199" FontSize="11" Foreground="Red"
                    Visibility="{Binding ElementName=RangerCount, Path=Text, Converter={StaticResource CountHasGoodNumberConverter}}"/>
         <TextBlock Text="Wood Furnace" Canvas.Left="276" Canvas.Top="215" FontSize="16" TextAlignment="Center"/>
-        <TextBox x:Name="NeededAmount_Copy3" Canvas.Left="657" Canvas.Top="206" FontSize="20" Width="50" Height="30" IsReadOnly="True"/>
+        <TextBox x:Name="NeededAmount_Copy3" Canvas.Left="657" Canvas.Top="206" FontSize="20" Width="50" Height="30" IsReadOnly="True" TextAlignment="Center" Text="{Binding FurnaceWorkshops}"/>
         <GridSplitter Height="2" Canvas.Left="276" Canvas.Top="241" Width="479"/>
         <TextBox x:Name="ItemTypeFurnace" Text="Charcoal" Width="120" Canvas.Left="448" Canvas.Top="218" IsReadOnly="True" TextAlignment="Center"/>
 

@@ -21,15 +21,27 @@ namespace DwarfCalculator.ViewModels
         [BindableProperty]
         public virtual string CraftWorkshops { get; set; } = "0";
         [BindableProperty]
+        public virtual string SmithyWorkshops { get; set; } = "0";
+        [BindableProperty]
+        public virtual int SmithyItemIndex { get; set; } = 0;
+        [BindableProperty]
+        public virtual int SmithyMaterialIndex { get; set; } = 0;
+        [BindableProperty]
         public virtual string SmelterWorkshops { get; set; } = "0";
         [BindableProperty]
-        public virtual string SmelterItemWorkshops { get; set; } = "0";
+        public virtual string SmelterItem { get; set; } = "";
         [BindableProperty]
         public virtual string FurnaceWorkshops { get; set; } = "0";
+
         [BindableProperty(OnPropertyChangedMethodName = nameof(CheckInputValidity))]
         public virtual string DwarfcountInput { get; set; } = "";
-        [BindableProperty(OnPropertyChangedMethodName = nameof(CheckInputValidity))]
+
+        [BindableProperty]
         public virtual string RangercountInput { get; set; } = "";
+
+        [BindableProperty]
+        public virtual string WarriorcountInput { get; set; } = "";
+
         [BindableProperty]
         public virtual bool ButtonEnabled { get; set; } = false;
 
@@ -41,34 +53,26 @@ namespace DwarfCalculator.ViewModels
         public void OnCalculate()
         {
             if (!int.TryParse(DwarfcountInput, out int dwarfsAvailable)) return;
+            if (!int.TryParse(RangercountInput, out int rangersAvailable)) RangercountInput = "0";
 
-            Calculator calc = new Calculator(dwarfsAvailable, 10, 12);
+            Calculator calc = new Calculator(dwarfsAvailable,rangersAvailable, KitchenItemIndex, CraftItemIndex);
 
-            KitchenWorkshops = calc.KitchenOutput.ToString();
-            CraftWorkshops = CraftItemIndex.ToString();
+            KitchenWorkshops = calc.KitchenOutput;
+            FarmerWorkshops = calc.FarmerOutput;
+            CraftWorkshops = calc.CraftOutput;
+            SmelterWorkshops = calc.SmelterOutput;
+            SmelterItem = calc.SmelterItemInput;
+            FurnaceWorkshops = calc.FurnaceOutput;
+
         }
         public void CheckInputValidity()
         {
-            if (int.TryParse(RangercountInput, out int i) && int.TryParse(DwarfcountInput, out int n))
+            if (int.TryParse(DwarfcountInput, out int n))
             {
                 ButtonEnabled = true;
             }
             else ButtonEnabled = false;
         }
-        protected int GetKitchenItemValue(int itemIndex)
-        {
-            switch (itemIndex)
-            {
-                case 0:
-                    break;
-                case 1:
-                    break;
-                case 2:
-                    break;
-                default:
-                    return 0;
-            }
-            return 0;
-        }
+        
     }
 }

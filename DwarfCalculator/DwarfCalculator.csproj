@@ -68,6 +68,7 @@
     </ApplicationDefinition>
     <Compile Include="Converter\CountHasGoodNumberConverter.cs" />
     <Compile Include="DwarfCalculator.cs" />
+    <Compile Include="DwarfLibrary.cs" />
     <Compile Include="DwarfMath.cs" />
     <Compile Include="ViewModels\MainWindowVM.cs" />
     <Page Include="MainWindow.xaml">

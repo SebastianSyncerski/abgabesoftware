@@ -17,3 +17,22 @@ C:\Users\sesyncerski\Desktop\Abgabe\DwarfCalculator\obj\Debug\DwarfCalculator.cs
 C:\Users\sesyncerski\Desktop\Abgabe\DwarfCalculator\obj\Debug\DwarfCalculator.csproj.CopyComplete
 C:\Users\sesyncerski\Desktop\Abgabe\DwarfCalculator\obj\Debug\DwarfCalculator.exe
 C:\Users\sesyncerski\Desktop\Abgabe\DwarfCalculator\obj\Debug\DwarfCalculator.pdb
+D:\New folder\abgabesoftware\DwarfCalculator\bin\Debug\DwarfCalculator.exe.config
+D:\New folder\abgabesoftware\DwarfCalculator\bin\Debug\DwarfCalculator.exe
+D:\New folder\abgabesoftware\DwarfCalculator\bin\Debug\DwarfCalculator.pdb
+D:\New folder\abgabesoftware\DwarfCalculator\bin\Debug\DevExpress.Mvvm.dll
+D:\New folder\abgabesoftware\DwarfCalculator\bin\Debug\DevExpress.Mvvm.UI.dll
+D:\New folder\abgabesoftware\DwarfCalculator\bin\Debug\DevExpress.Mvvm.pdb
+D:\New folder\abgabesoftware\DwarfCalculator\bin\Debug\DevExpress.Mvvm.UI.pdb
+D:\New folder\abgabesoftware\DwarfCalculator\obj\Debug\MainWindow.g.cs
+D:\New folder\abgabesoftware\DwarfCalculator\obj\Debug\App.g.cs
+D:\New folder\abgabesoftware\DwarfCalculator\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\New folder\abgabesoftware\DwarfCalculator\obj\Debug\DwarfCalculator_MarkupCompile.cache
+D:\New folder\abgabesoftware\DwarfCalculator\obj\Debug\DwarfCalculator_MarkupCompile.lref
+D:\New folder\abgabesoftware\DwarfCalculator\obj\Debug\MainWindow.baml
+D:\New folder\abgabesoftware\DwarfCalculator\obj\Debug\DwarfCalculator.g.resources
+D:\New folder\abgabesoftware\DwarfCalculator\obj\Debug\DwarfCalculator.Properties.Resources.resources
+D:\New folder\abgabesoftware\DwarfCalculator\obj\Debug\DwarfCalculator.csproj.GenerateResource.cache
+D:\New folder\abgabesoftware\DwarfCalculator\obj\Debug\DwarfCalculator.csproj.CopyComplete
+D:\New folder\abgabesoftware\DwarfCalculator\obj\Debug\DwarfCalculator.exe
+D:\New folder\abgabesoftware\DwarfCalculator\obj\Debug\DwarfCalculator.pdb
