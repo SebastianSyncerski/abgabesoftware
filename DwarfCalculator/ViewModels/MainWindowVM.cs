@@ -67,7 +67,8 @@ namespace DwarfCalculator.ViewModels
         }
         public void CheckInputValidity()
         {
-            if (int.TryParse(DwarfcountInput, out int n))
+            int.TryParse(RangercountInput, out int rangersAvailable);
+            if (int.TryParse(DwarfcountInput, out int n) && n >= rangersAvailable)
             {
                 ButtonEnabled = true;
             }

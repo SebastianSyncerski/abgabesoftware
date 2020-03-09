@@ -17,7 +17,7 @@
     </Window.Resources>
     <Canvas>
         <TextBox x:Name="DwarfCount" Canvas.Left="61" Canvas.Top="37" FontSize="20" Width="94" Height="30" TextAlignment="Center" Text="{Binding DwarfcountInput, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBlock x:Name="DwarfCountHeader" Text="Current Amount of Dwarfs" Canvas.Left="18" Canvas.Top="11" FontSize="16" FontWeight="Bold" TextDecorations="Underline"/>
+        <TextBlock x:Name="DwarfCountHeader" Text="Total Amount of Dwarfs" Canvas.Left="18" Canvas.Top="11" FontSize="16" FontWeight="Bold" TextDecorations="Underline"/>
         <TextBlock x:Name="DwarfCountErrormessage" Text="Dwarf count is not a valid number!" Canvas.Left="28" Canvas.Top="72" FontSize="11" Foreground="Red" 
                    Visibility="{Binding ElementName=DwarfCount, Path=Text, Converter={StaticResource CountHasGoodNumberConverter}}"/>
         <Button x:Name="CalculateButton" Content="Calculate" Canvas.Left="71" Canvas.Top="100" Width="75" Command="{Binding OnCalculateCommand}" IsEnabled="{Binding ButtonEnabled}"/>
@@ -50,7 +50,7 @@
         </ComboBox>
         <TextBox x:Name="ItemTypeSmelter" Text="{Binding SmelterItem}" Width="120" Canvas.Left="448" Canvas.Top="176" IsReadOnly="True" TextAlignment="Center"/>
         <TextBox x:Name="RangerCount" Canvas.Left="61" Canvas.Top="164" FontSize="20" Width="94" Height="30" TextAlignment="Center" Text="{Binding RangercountInput, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBlock x:Name="RangerCountHeader" Text="Current Amount of Rangers" Canvas.Left="18" Canvas.Top="138" FontSize="16" FontWeight="Bold" TextDecorations="Underline"/>
+        <TextBlock x:Name="RangerCountHeader" Text="Total Amount of Rangers" Canvas.Left="18" Canvas.Top="138" FontSize="16" FontWeight="Bold" TextDecorations="Underline"/>
         <TextBlock x:Name="RangerCountErrormessage" Text="Dwarf count is not a valid number!" Canvas.Left="28" Canvas.Top="199" FontSize="11" Foreground="Red"
                    Visibility="{Binding ElementName=RangerCount, Path=Text, Converter={StaticResource CountHasGoodNumberConverter}}"/>
         <TextBlock Text="Wood Furnace" Canvas.Left="276" Canvas.Top="215" FontSize="16" TextAlignment="Center"/>
